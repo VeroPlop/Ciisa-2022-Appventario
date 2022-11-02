@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ciisa2022Appventario" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorOnBackground">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="textBackground">@color/black</item>
+
+    </style>
+
+
+    <style name="Theme.Ciisa2022Appventario" parent="Base.Theme.Ciisa2022Appventario" />
+
+    <style name="Theme.Ciisa2022Appventario.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Ciisa2022Appventario.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:backgroundTint">@color/black</item>
+
+    </style>
+
+
+    <style name="Theme.Ciisa2022Appventario.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

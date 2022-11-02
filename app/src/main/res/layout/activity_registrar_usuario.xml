@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registrarUsuario">
+
+   <androidx.constraintlayout.widget.Guideline
+android:id="@+id/guideline2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+app:layout_constraintGuide_percent="0.10" />
+
+   <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/guideline6"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       app:layout_constraintGuide_percent="0.10" />
+
+<androidx.constraintlayout.widget.Guideline
+android:id="@+id/guideline7"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+app:layout_constraintGuide_percent="0.9056088" />
+
+<androidx.constraintlayout.widget.Guideline
+android:id="@+id/guideline8"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+app:layout_constraintGuide_percent="0.9056088" />
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cardView"
+       android:layout_width="0dp"
+       android:layout_height="40dp"
+       app:cardBackgroundColor="@android:color/holo_green_light"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:fontFamily="@font/comic_neue_bold"
+          android:text="Registrar Usuario"
+          android:textAlignment="center"
+          android:textColor="@color/white"
+          android:textSize="28sp" />
+
+      <ImageButton
+          android:id="@+id/btn_backmenu"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:backgroundTint="@android:color/holo_green_light"
+          app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+   </androidx.cardview.widget.CardView>
+
+   <EditText
+       android:id="@+id/edittext_PersonName"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="32dp"
+       android:ems="20"
+       android:inputType="textPersonName"
+       android:hint="Nombre Completo"
+       app:layout_constraintBottom_toTopOf="@+id/guideline7"
+       app:layout_constraintEnd_toStartOf="@+id/guideline8"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="@+id/guideline6"
+       app:layout_constraintTop_toBottomOf="@+id/cardView"
+       app:layout_constraintVertical_bias="0.17" />
+
+   <EditText
+       android:id="@+id/edittext_personrut"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="32dp"
+       android:layout_marginBottom="32dp"
+       android:ems="20"
+       android:inputType="textPersonName"
+       android:hint="Rut"
+       android:maxLength="10"
+
+
+       app:layout_constraintBottom_toTopOf="@+id/til_password"
+       app:layout_constraintEnd_toStartOf="@+id/guideline8"
+       app:layout_constraintStart_toStartOf="@+id/guideline6"
+       app:layout_constraintTop_toBottomOf="@+id/edittext_PersonName" />
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/til_password"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="32dp"
+
+       app:layout_constraintEnd_toStartOf="@+id/guideline8"
+       app:layout_constraintStart_toStartOf="@+id/guideline6"
+       app:layout_constraintTop_toBottomOf="@+id/edittext_personrut"
+       app:passwordToggleEnabled="true">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/first_password"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:drawableStart="@drawable/ic_baseline_lock_24"
+          android:hint="Contraseña"
+          android:inputType="textPassword" />
+
+
+   </com.google.android.material.textfield.TextInputLayout>
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/til_repassword"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="32dp"
+       app:layout_constraintEnd_toStartOf="@+id/guideline8"
+       app:layout_constraintStart_toStartOf="@+id/guideline6"
+       app:layout_constraintTop_toBottomOf="@+id/til_password"
+       app:passwordToggleEnabled="true">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/first_repassword"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:drawableStart="@drawable/ic_baseline_lock_24"
+          android:hint="Confirme Contraseña"
+          android:inputType="textPassword" />
+
+
+   </com.google.android.material.textfield.TextInputLayout>
+
+   <Button
+       android:id="@+id/btn_agregarO"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="8dp"
+       android:backgroundTint="@android:color/holo_green_dark"
+       android:text="Crear Cuenta"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="@+id/btn_cancelar"
+       app:layout_constraintHorizontal_bias="0.231"
+       app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/til_function"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="32dp"
+       app:layout_constraintEnd_toStartOf="@+id/guideline8"
+       app:layout_constraintStart_toStartOf="@+id/guideline6"
+       app:layout_constraintTop_toBottomOf="@+id/til_repassword">
+
+      <AutoCompleteTextView
+          android:id="@+id/autoCompleteTextView2"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:hint="Seleccione su función"
+          android:inputType="none" />
+   </com.google.android.material.textfield.TextInputLayout>
+
+   <Button
+       android:id="@+id/btn_cancelar"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="8dp"
+       android:backgroundTint="@android:color/darker_gray"
+       android:text="@string/btn_cancelar"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toStartOf="@+id/guideline8"
+       app:layout_constraintHorizontal_bias="0.872"
+       app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
